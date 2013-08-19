@@ -1,0 +1,344 @@
+/*-----------------------------------*\
+
+	$RESET
+
+	Blanket reset. For something less
+	volatile, I’d recommend Eric
+	Meyer’s reset.
+
+\*-----------------------------------*/
+
+/* Sloppy reset. Applied to everything. */
+*, :before, :after {
+	margin: 0;
+	padding: 0;
+	/* Layout for dummies */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+
+/* Blanket ban on oversized images. */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/*-----------------------------------*\
+
+	$SHARED
+
+	Reserved for html-level shared
+	properties and simple helpers.
+
+\*-----------------------------------*/
+
+/* Set up some vertical rhythm and block-level element helpers */
+p, .p, blockquote, table, form, ul, ol, .img,
+h1, .alpha, h2, .beta, .mega, .ultra {
+	display: block;
+	margin-bottom: 1.429rem;
+}
+
+.b {
+	display: block;
+}
+
+.standalone {
+	margin-bottom: 0;
+}
+
+/* Remove this for hanging bullets */
+ul, ol {
+	padding-left: 1.3em;
+}
+
+	/* Restore some normality to our nested lists */
+	li > ul, li > ol {
+		margin-bottom: 0;
+	}
+
+/*-----------------------------------*\
+
+	$TYPE
+
+	Low-level type things. Headings,
+	links, blockquotes, etc.
+
+\*-----------------------------------*/
+
+h1, .alpha {
+	font-size: 3rem;
+	line-height: .952;
+}
+
+h2, .beta {
+	font-size: 2rem;
+	line-height: 1.429;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+a {
+	color: #38373a;
+	text-decoration: none;
+}
+
+p > a {
+	border-bottom: 1px dashed;
+}
+
+	a:hover {
+		border-bottom-style: solid;
+	}
+
+	p > a[href^="http://"]:after {
+		content: '\27B6';
+	}
+
+.caps {
+	font-family: "Whitney SSm SC A", "Whitney SSm SC B", sans-serif;
+}
+
+.meta {
+	opacity: .75;
+	font-family: "Whitney SSm SC A", "Whitney SSm SC B", sans-serif;
+	font-size: .857rem;
+}
+
+.hfj-requiem {
+	font-style: italic;
+	font-family: "Requiem Display A", "Requiem Display B", serif;
+}
+
+.hfj-hoefler-text {
+	font-family: "Hoefler Text A", "Hoefler Text B", serif;
+}
+
+/*-----------------------------------*\
+
+	$OBJECTS
+
+	Abstracted things and common
+	patterns go here. Not to be
+	confused with helpers.
+
+\*-----------------------------------*/
+
+.wrap {
+	max-width: 34rem;
+	margin: 0 auto;
+}
+
+.nav, .nav ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+	.nav li, .nav a {
+		display: inline-block;
+	}
+
+.island {
+	padding: 2.858rem;
+}
+
+.isle {
+	padding: 1.429rem;
+}
+
+.spit {
+	padding: .7145rem;
+}
+
+/*-----------------------------------*\
+
+	$MAIN
+
+	Anything that can’t be abstracted
+	or assigned to another section.
+	Low-level stuff.
+
+\*-----------------------------------*/
+
+::selection {
+	background-color: #dddedf;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background-color: #dddedf;
+	text-shadow: none;
+}
+
+html {
+	font: 131.25%/1.429 "Whitney SSm A", "Whitney SSm B", sans-serif;
+	color: #222;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+	@media (max-width: 600px) {
+		html {
+			font-size: 105%;
+		}
+	}
+
+/*-----------------------------------*\
+	$HEADER
+\*-----------------------------------*/
+
+.site--header {
+	color: #7a98b8;
+	background-color: #e9ebe9;
+}
+
+	.site--title {
+		margin-top: 1.429rem;
+		letter-spacing: -.05em;
+		border-bottom: 5px solid #7a98b8;
+		padding-bottom: 1.19047619rem;
+	}
+
+		.site--logo {
+			margin: 0 auto;
+		}
+
+	.site--nav {
+
+	}
+
+		.nav--link {
+			border: 0;
+		}
+
+		.nav--link .wrap {
+			white-space: nowrap;
+			overflow: hidden;
+		}
+
+			.nav--link .wrap:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				width: 9rem;
+				background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
+				background-image:    -moz-linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+				background-image:     -ms-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
+				background-image:      -o-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
+				background-image:         linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+			}
+
+			.nav--link:hover {
+				background-color: #7b99b7;
+				color: #e9ebe9;
+			}
+
+				.nav--link:hover .wrap:after {
+					background-image: -webkit-linear-gradient(0deg, rgba(123,153,183,0), rgba(123,153,183,1));
+					background-image:    -moz-linear-gradient(to right, rgba(123,153,183,0), rgba(123,153,183,1));
+					background-image:     -ms-linear-gradient(0deg, rgba(123,153,183,0), rgba(123,153,183,1));
+					background-image:      -o-linear-gradient(0deg, rgba(123,153,183,0), rgba(123,153,183,1));
+					background-image:         linear-gradient(to right, rgba(123,153,183,0), rgba(123,153,183,1));
+				}
+
+			.typekit {
+				background-color: #493848;
+				color: #bfb39b;
+			}
+
+				.typekit .wrap:after {
+					background-image: -webkit-linear-gradient(0deg, rgba(73,56,72,0), rgba(73,56,72,1));
+					background-image:    -moz-linear-gradient(to right, rgba(73,56,72,0), rgba(73,56,72,1));
+					background-image:     -ms-linear-gradient(0deg, rgba(73,56,72,0), rgba(73,56,72,1));
+					background-image:      -o-linear-gradient(0deg, rgba(73,56,72,0), rgba(73,56,72,1));
+					background-image:         linear-gradient(to right, rgba(73,56,72,0), rgba(73,56,72,1));
+				}
+
+				.typekit:hover {
+					color: #bfb39b;
+					background-color: #392838;
+				}
+
+					.typekit:hover .wrap:after {
+						background-image: -webkit-linear-gradient(0deg, rgba(57,40,56,0), rgba(57,40,56,1));
+						background-image:    -moz-linear-gradient(to right, rgba(57,40,56,0), rgba(57,40,56,1));
+						background-image:     -ms-linear-gradient(0deg, rgba(57,40,56,0), rgba(57,40,56,1));
+						background-image:      -o-linear-gradient(0deg, rgba(57,40,56,0), rgba(57,40,56,1));
+						background-image:         linear-gradient(to right, rgba(57,40,56,0), rgba(57,40,56,1));
+					}
+
+			.twins {
+				background-color: #89a1bc;
+				color: #eaeff5;
+			}
+
+				.twins .wrap:after {
+					background-image: -webkit-linear-gradient(0deg, rgba(137,161,188,0), rgba(137,161,188,1));
+					background-image:    -moz-linear-gradient(to right, rgba(137,161,188,0), rgba(137,161,188,1));
+					background-image:     -ms-linear-gradient(0deg, rgba(137,161,188,0), rgba(137,161,188,1));
+					background-image:      -o-linear-gradient(0deg, rgba(137,161,188,0), rgba(137,161,188,1));
+					background-image:         linear-gradient(to right, rgba(137,161,188,0), rgba(137,161,188,1));
+				}
+
+				.twins:hover {
+					background-color: #6c798e;
+				}
+
+					.twins:hover .wrap:after {
+						background-image: -webkit-linear-gradient(0deg, rgba(108,121,142,0), rgba(108,121,142,1));
+						background-image:    -moz-linear-gradient(to right, rgba(108,121,142,0), rgba(108,121,142,1));
+						background-image:     -ms-linear-gradient(0deg, rgba(108,121,142,0), rgba(108,121,142,1));
+						background-image:      -o-linear-gradient(0deg, rgba(108,121,142,0), rgba(108,121,142,1));
+						background-image:         linear-gradient(to right, rgba(108,121,142,0), rgba(108,121,142,1));
+					}
+
+			.hfj {
+				color: #dace9a;
+				background-color: #738084;
+			}
+
+				.hfj .wrap:after {
+					background-image: -webkit-linear-gradient(0deg, rgba(115,128,132,0), rgba(115,128,132,1));
+					background-image:    -moz-linear-gradient(to right, rgba(115,128,132,0), rgba(115,128,132,1));
+					background-image:     -ms-linear-gradient(0deg, rgba(115,128,132,0), rgba(115,128,132,1));
+					background-image:      -o-linear-gradient(0deg, rgba(115,128,132,0), rgba(115,128,132,1));
+					background-image:         linear-gradient(to right, rgba(115,128,132,0), rgba(115,128,132,1));
+				}
+
+				.hfj:hover {
+					color: #dace9a;
+					background-color: #536064;
+				}
+
+					.hfj:hover .wrap:after {
+						background-image: -webkit-linear-gradient(0deg, rgba(83,96,100,0), rgba(83,96,100,1));
+						background-image:    -moz-linear-gradient(to right, rgba(83,96,100,0), rgba(83,96,100,1));
+						background-image:     -ms-linear-gradient(0deg, rgba(83,96,100,0), rgba(83,96,100,1));
+						background-image:      -o-linear-gradient(0deg, rgba(83,96,100,0), rgba(83,96,100,1));
+						background-image:         linear-gradient(to right, rgba(83,96,100,0), rgba(83,96,100,1));
+					}
+
+/*-----------------------------------*\
+	$FOOTER
+\*-----------------------------------*/
+
+.site--footer {
+	font-size: .857rem;
+	background-color: #69686b;
+	color: #c9cbc9;
+	font-family: "Whitney SSm SC A", "Whitney SSm SC B", sans-serif;
+}
+
+	.site--footer :last-child {
+		margin-bottom: 0;
+	}
+
+	.site--footer a {
+		color: inherit;
+	}

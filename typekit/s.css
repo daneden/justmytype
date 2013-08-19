@@ -1,0 +1,512 @@
+.wf-loading {
+  height: 100%;
+  overflow: hidden;
+  background: url(images/ajax-loader.gif) center center no-repeat fixed;
+}
+
+.wf-loading * {
+  opacity: 0;
+}
+
+.wf-active body, .wf-inactive body {
+  -webkit-animation: fade 1s ease;
+     -moz-animation: fade 1s ease;
+    -ms-animation: fade 1s ease;
+     -o-animation: fade 1s ease;
+      animation: fade 1s ease;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+     -o-animation-fill-mode: both;
+      animation-fill-mode: both;
+}
+
+@-webkit-keyframes fade {
+  0% { display: none; opacity: 0; }
+  1% { display: block; }
+  100%{ opacity: 1; }
+}
+
+@-moz-keyframes fade {
+  0% { display: none; opacity: 0; }
+  1% { display: block; }
+  100%{ opacity: 1; }
+}
+
+@-ms-keyframes fade {
+  0% { display: none; opacity: 0; }
+  1% { display: block; }
+  100%{ opacity: 1; }
+}
+
+@-o-keyframes fade {
+  0% { display: none; opacity: 0; }
+  1% { display: block; }
+  100%{ opacity: 1; }
+}
+
+@keyframes fade {
+  0% { display: none; opacity: 0; }
+  1% { display: block; }
+  100%{ opacity: 1; }
+}
+
+:-moz-selection {
+  color: #fff;
+  text-shadow: none;
+  background: #778da8;
+}
+
+:selection {
+  color: #fff;
+  text-shadow: none;
+  background: #778da8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+html {
+  font: 131.25%/1.429 proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  background-image: url(images/curves.png);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga", "dlig";
+     -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+}
+
+section:target {
+  display: block; /* Allow testing of unreleased stacks */
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 100%; /* Inflated type is too big on mobile */
+  }
+}
+
+.wrap { /* Abstract our container */
+  margin: 0 auto;
+  padding: 36px 24px;
+  padding: 1.5rem 1rem;
+  position: relative;
+  max-width: 34rem;
+}
+
+.paid:before, .free:before {
+  font-family: proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+  content: "£";
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: #333;
+  background-color: rgba(0,0,0,.7);
+  font-weight: 700;
+  padding: .4em .75em;
+  font-size: .65em;
+  text-transform: uppercase;
+}
+
+.free:before {
+  content: "Free";
+}
+
+  @media screen and (max-width: 600px) {
+    .paid:before, .free:before {
+      font-size: 16px;
+      font-size: 1rem;
+    }
+  }
+
+  .set-in {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    color: #222;
+    font-family: proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: .75em;
+    text-shadow: none;
+  }
+
+h1 {
+  font-size: 108px;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 36px;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 36px;
+  margin-bottom: 1.5rem;
+}
+
+a, section[class] .set-in a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #f93f3b;
+}
+
+q {
+  opacity: .7;
+  font-style: italic;
+  quotes:"“" "”";
+}
+
+a:hover { opacity: .6; }
+
+  header .title {
+    font-size: 5.95rem;
+    letter-spacing: -0.04em;
+    color: #f93f3b;
+  }
+
+    header .title .word2 {
+      color: #fb7f7d;
+    }
+
+    header .title .word3 {
+      color: #fdc0bf;
+    }
+
+      header .title .word3 .char1 {
+        margin-right: .05em;
+      }
+
+.didone {
+  background-color: #e1dce3;
+  color: #413745;
+}
+
+  .didone h1 {
+    font-family: ambroise-std, serif;
+  }
+
+.brandon {
+  background-color: #2b3844;
+  color: #faefde;
+  font-family: ff-meta-serif-web-pro, serif;
+}
+
+  .brandon h1 {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+
+  .brandon h2 {
+    font-size: 18px;
+    font-size: .75rem;
+    line-height: 36px;
+    line-height: 1.5rem;
+    margin-bottom: 36px;
+    margin-bottom: 1.5rem;
+    color: #f66169;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+  }
+
+.swiss {
+  font-family: nimbus-sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #c01d2b;
+  color: #fff;
+}
+
+  .swiss h1 {
+    letter-spacing: -.02em;
+    font-weight: 100;
+    position: relative;
+  }
+
+  .swiss h1:after {
+    content: "+";
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-top: -.17em;
+  }
+
+.headline {
+  font-family: Georgia, Times New Roman, serif;
+  background-color: #f9f8f3;
+  color: #38341c;
+}
+
+  .headline h1 {
+    font-family: prenton-ultra-condensed, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .headline time {
+    display: block;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    color: #c70;
+    font-weight: 700;
+    letter-spacing: .3em;
+    margin-bottom: 1.5em;
+  }
+
+  .headline p:first-of-type:first-letter {
+    font-weight: 700;
+    float: left;
+    font-size: 72px;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0 12px 0;
+  }
+
+.geometric {
+  background-color: #C9CEC9;
+  color: #272B27;
+  font-family: ff-tisa-web-pro, serif;
+}
+
+  .geometric h1 {
+    font-family: futura-pt, Futura, sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .geometric h2 {
+    font-family: futura-pt, Futura, sans-serif;
+    text-align: center;
+    font-size: 18px;
+    font-size: .75rem;
+    line-height: 36px;
+    line-height: 1.5rem;
+    margin-bottom: 36px;
+    margin-bottom: 1.5rem;
+    color: #c3996b;
+    letter-spacing: .45em;
+    text-transform: uppercase;
+  }
+
+.bringhurst {
+  font-family: garamond-premier-pro, Georgia, Times New Roman, serif;
+  background: #fbfaf5;
+  color: #222;
+}
+
+  .bringhurst h1 {
+    font-family: league-gothic, sans-serif;
+    border-bottom: 6px solid #f64;
+    border-bottom: .25rem solid #f64;
+    margin-bottom: 30px;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  .bringhurst .columns {
+    -webkit-columns: 2;
+    -webkit-column-rule: 1px solid #222;
+    -webkit-column-gap: 1.5em;
+    -moz-columns: 2;
+    -moz-column-rule: 1px solid #222;
+    -moz-column-gap: 1.5em;
+    columns: 2;
+    column-rule: 1px solid #222;
+    column-gap: 1.5em;
+    font-size: 18px;
+    font-size: .75rem;
+    line-height: 1.57;
+    margin-bottom: 2.2em;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 600px) {
+    .bringhurst .columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5em;
+    }
+  }
+
+.logan {
+  font-family: adelle, serif;
+  color: #3d3d3d;
+}
+
+  .logan h1 {
+    font-family: proxima-nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #d10a0a;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+.blueprint {
+  background-color: #405f83;
+  background-image: url(images/blueprint.png);
+  color: #fff;
+  font-family: skolar, serif;
+}
+
+  .blueprint h1 {
+    font-family: ff-meta-web-pro, sans-serif;
+    color: #FFF2C2;
+  }
+
+  .blueprint h2 {
+    margin-bottom: 0;
+    font-family: ff-meta-web-pro, sans-serif;
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+.cubano {
+  font-family: pt-sans, sans-serif;
+  background: #c87548;
+  color: #f0f2df;
+}
+
+  .cubano h1 {
+    font-family: cubano, sans-serif;
+    color: #63342C;
+  }
+
+    .cubano h1 span {
+      position: relative;
+      display: inline-block;
+    }
+
+    .cubano h1 span:nth-child(odd) {
+      color: #9b5145;
+    }
+
+    .cubano h1 span:nth-child(3n+2) {
+      -webkit-transform: rotate(-2deg);
+         -moz-transform: rotate(-2deg);
+        -ms-transform: rotate(-2deg);
+         -o-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+    }
+
+    .cubano h1 span:nth-child(5n+2) {
+      -webkit-transform: rotate(4deg);
+         -moz-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+         -o-transform: rotate(4deg);
+          transform: rotate(4deg);
+    }
+
+    .cubano .char7, .cubano .char10 {
+      width: .35em;
+    }
+
+.monocle {
+  font-family: adobe-garamond-pro, Georgia, Times New Roman, serif;
+  background-color: #fff;
+}
+
+  .monocle h1 {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 36px;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+    .monocle h1 .char1 {
+      margin-right: -.1em;
+    }
+
+  .monocle h2 {
+    color: #eb7966;
+    font-size: 24px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-style: oblique;
+    font-weight: 400;
+  }
+
+  .monocle i {
+    text-transform: lowercase;
+    font-variant: small-caps;
+    color: #9b9b9b;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+.printed {
+  color: #fff;
+  background-color: #333;
+  background-image: url(images/tire.png);
+  font-family: jubilat, serif;
+}
+
+  .printed h1 {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  .printed a {
+    color: #B49251;
+  }
+
+.playful {
+  color: #F8FBEE;
+  background-color: #4f6566;
+  text-shadow: 0 1px 1px rgba(0,0,0,.1);
+  font-family: pt-serif;
+}
+
+  .playful h1 {
+    font-family: proxima-nova-soft;
+    font-weight: 700;
+    letter-spacing: -.025em;
+  }
+
+.freight {
+  background-color: #43404d;
+  color: #fff;
+  font-family: ff-tisa-web-pro, serif;
+}
+
+  .freight h1 {
+    color: #c5d1a3;
+    font-family: freight-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+
+footer[role=contentinfo] {
+  background-color: #222;
+  background-image: url(images/darkcurves.png);
+  background-attachment: fixed;
+  color: #eee;
+}
+
+  footer[role=contentinfo] p {
+    margin-bottom: 0;
+  }
+
+  .twitter-share-button {
+    float: right;
+  }

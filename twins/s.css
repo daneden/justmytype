@@ -1,0 +1,139 @@
+/*-----------------------------------*\
+	$RESET
+\*-----------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+
+/*-----------------------------------*\
+	$OBJECTS
+\*-----------------------------------*/
+
+.wrap {
+	max-width: 800px;
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 4.5rem 1.5rem 3rem;
+}
+
+.set + .set {
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+
+/*-----------------------------------*\
+	$TYPE
+\*-----------------------------------*/
+
+p, ul, ol, dl, table, pre, form,
+h2, .beta, h3, .gamma {
+	margin-bottom: 30px;
+	margin-bottom: 1.5rem;
+}
+
+h1, .alpha {
+	font-style: italic;
+	font-weight: 400;
+	font-size: 60px;
+	font-size: 3rem;
+	line-height: 1;
+}
+
+h2, .beta {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .1em;
+	font-size: 16px;
+	font-size: .8rem;
+	line-height: 1.875;
+}
+
+.subtitle {
+	margin-bottom: 1.25rem;
+	padding-top: .25rem;
+}
+
+.subtitle, small {
+	color: rgba(0,0,0,.5);
+}
+
+small {
+	font-size: 16px;
+	font-size: .8rem;
+	line-height: 1;
+}
+
+a {
+	color: #F02311;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+/*-----------------------------------*\
+	$MAIN
+\*-----------------------------------*/
+
+html {
+	font: 125%/1.5 freight-text-pro, serif;
+	color: #222;
+	-webkit-font-smoothing: antialiased;
+}
+
+	@media screen and (max-width: 650px) {
+		html {
+			font-size: 100%;
+		}
+	}
+
+/*-----------------------------------*\
+	$FREIGHT
+\*-----------------------------------*/
+
+.freight {
+	font-family: freight-text-pro, serif;
+}
+
+.freight .subtitle, .freight .sans, .freight small {
+	font-family: freight-sans-pro, sans-serif;
+}
+
+/*-----------------------------------*\
+	$ADELLE
+\*-----------------------------------*/
+
+.adelle {
+	font-family: adelle, serif;
+}
+
+.adelle .subtitle, .adelle .sans, .adelle small {
+	font-family: adelle-sans, sans-serif;
+}
+
+/*-----------------------------------*\
+	$META
+\*-----------------------------------*/
+
+.meta {
+	font-family: ff-meta-serif-web-pro, serif;
+}
+
+.meta .subtitle, .meta .sans, .meta small {
+	font-family: ff-meta-web-pro, sans-serif;
+}
+
+/*-----------------------------------*\
+	$FOOTER
+\*-----------------------------------*/
+
+.site-footer {
+	font-family: freight-sans-pro, sans-serif;
+}

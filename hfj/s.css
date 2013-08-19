@@ -1,0 +1,183 @@
+/*-----------------------------------*\
+
+	$RESET
+
+	Blanket reset. For something less
+	volatile, I’d recommend Eric
+	Meyer’s reset.
+
+\*-----------------------------------*/
+
+/* Sloppy reset. Applied to everything. */
+*, :before, :after {
+	margin: 0;
+	padding: 0;
+	/* Layout for dummies */
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	position: relative;
+}
+
+/* Blanket ban on oversized images. */
+img {
+	max-width: 100%;
+}
+
+/*-----------------------------------*\
+
+	$SHARED
+
+	Reserved for html-level shared
+	properties and simple helpers.
+
+\*-----------------------------------*/
+
+/* Set up some vertical rhythm and block-level element helpers */
+p, .p, blockquote, table, form, ul, ol, .img,
+h1, .alpha, h2, .beta, .mega, .ultra {
+	display: block;
+	margin-bottom: 1.5rem;
+}
+
+/* Remove this for hanging bullets */
+ul, ol {
+	padding-left: 1.3em;
+}
+
+	/* Restore some normality to our nested lists */
+	li > ul, li > ol {
+		margin-bottom: 0;
+	}
+
+/*-----------------------------------*\
+
+	$TYPE
+
+	Low-level type things. Headings,
+	links, blockquotes, etc.
+
+\*-----------------------------------*/
+
+h1, .alpha {
+	font-size: 3rem;
+	line-height: 1;
+}
+
+h2, .beta {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+/*-----------------------------------*\
+
+	$OBJECTS
+
+	Abstracted things and common
+	patterns go here. Not to be
+	confused with helpers.
+
+\*-----------------------------------*/
+
+.wrap {
+	max-width: 34rem;
+	margin: 0 auto;
+}
+
+.nav, .nav ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+	.nav li, .nav a {
+		display: inline-block;
+	}
+
+.island {
+	padding: 2.858rem;
+}
+
+.isle {
+	padding: 1.429rem;
+}
+
+.spit {
+	padding: .7145rem;
+}
+
+/*-----------------------------------*\
+
+	$MAIN
+
+	Anything that can’t be abstracted
+	or assigned to another section.
+	Low-level stuff.
+
+\*-----------------------------------*/
+
+::selection {
+	background-color: #dddedf;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background-color: #dddedf;
+	text-shadow: none;
+}
+
+html {
+	font: 131.25%/1.429 "Whitney SSm A", "Whitney SSm B", sans-serif;
+	color: #222;
+	background-color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+	@media (max-width: 600px) {
+		html {
+			font-size: 105%;
+		}
+	}
+
+/*-----------------------------------*\
+	$HEADER
+\*-----------------------------------*/
+
+.site--header {
+
+}
+
+	.site--title {
+
+	}
+
+	.site--nav {
+
+	}
+
+/*-----------------------------------*\
+	$POSTS
+\*-----------------------------------*/
+
+.entry {
+
+}
+
+	.entry--header {
+
+	}
+
+		.entry--title {
+
+		}
+
+	.entry--content {
+
+	}
+
+/*-----------------------------------*\
+	$PAGES
+\*-----------------------------------*/
