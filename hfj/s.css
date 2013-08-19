@@ -60,8 +60,8 @@ ul, ol {
 \*-----------------------------------*/
 
 h1, .alpha {
-	font-size: 3rem;
-	line-height: 1;
+	font-size: 2.381rem;
+	line-height: 1.2;
 }
 
 h2, .beta {
@@ -72,6 +72,23 @@ h2, .beta {
 h3 {
 	font-size: 1rem;
 }
+
+a {
+	color: #c87051;
+	text-decoration: none;
+}
+
+p > a {
+	border-bottom: 1px dashed;
+}
+
+	a:hover {
+		border-bottom-style: solid;
+	}
+
+	p > a[href^="http://"]:after {
+		content: '\27B6';
+	}
 
 /*-----------------------------------*\
 
@@ -86,6 +103,10 @@ h3 {
 .wrap {
 	max-width: 34rem;
 	margin: 0 auto;
+}
+
+.standalone {
+	margin-bottom: 0;
 }
 
 .nav, .nav ul {
@@ -131,8 +152,8 @@ h3 {
 
 html {
 	font: 131.25%/1.429 "Whitney SSm A", "Whitney SSm B", sans-serif;
-	color: #222;
-	background-color: #fff;
+	color: #38373a;
+	background-color: #f9fbf9;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -159,25 +180,75 @@ html {
 	}
 
 /*-----------------------------------*\
-	$POSTS
+	$SETS
 \*-----------------------------------*/
 
-.entry {
-
-}
-
-	.entry--header {
-
+	.set--info {
+		font-family: "Whitney SSm A", "Whitney SSm B";
+		color: #333;
+		font-size: .857rem;
+		background-color: #fff;
+		box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		border-radius: .25rem;
 	}
 
-		.entry--title {
+/* Requiem Display & Hoelfer Text */
+.set--requiem-hoefler {
+	font-family: "Hoefler Text A", "Hoefler Text B", serif;
+	background-color: #eae2ca;
+	color: #5f5c5a;
+}
 
-		}
+	.set--requiem-hoefler h2 {
+		font-family: "Requiem Display A", "Requiem Display B", serif;
+		font-style: italic;
+	}
 
-	.entry--content {
+/* Gotham Condensed & Whitney */
+.set--gotham-whitney {
+	font-family: "Whitney SSm A", "Whitney SSm B", sans-serif;
+	background-color: #4f5565;
+	color: #a6a9b3;
+}
 
+	.set--gotham-whitney h2 {
+		font-family: "Gotham Cond A", "Gotham Cond B", sans-serif;
+		border-bottom: 5px solid;
+		padding-bottom: .7145rem;
+	}
+
+/* Knockout & Archer */
+.set--knockout-archer {
+	font-family: "Archer SSm A", "Archer SSm B", serif;
+	background-color: #4b3b4a;
+	color: #dac184;
+}
+
+	.set--knockout-archer h2 {
+		font-family: "Knockout 92 A", "Knockout 92 B", sans-serif;
+	}
+
+/* Chronicle & Mercury */
+.set--chronicle-mercury {
+	font-family: "Mercury SSm A", "Mercury SSm B", serif;
+	background-color: #d3955a;
+	color: #3a372a;
+}
+
+	.set--chronicle-mercury h2 {
+		font-family: "Chronicle Display A", "Chronicle Display B", serif;
 	}
 
 /*-----------------------------------*\
-	$PAGES
+	$FOOTER
 \*-----------------------------------*/
+
+.site--footer {
+	font-size: .857rem;
+	background-color: #69686b;
+	color: #c9cbc9;
+}
+
+	.site--footer a {
+		color: inherit;
+	}
