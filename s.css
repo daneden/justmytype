@@ -112,6 +112,7 @@ p > a {
 .hfj-requiem {
 	font-style: italic;
 	font-family: "Requiem Display A", "Requiem Display B", serif;
+	font-weight: 400;
 }
 
 .hfj-hoefler-text {
@@ -179,6 +180,7 @@ html {
 	color: #222;
 	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 	@media (max-width: 600px) {

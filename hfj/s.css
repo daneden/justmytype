@@ -155,6 +155,7 @@ html {
 	color: #38373a;
 	background-color: #f9fbf9;
 	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 	@media (max-width: 600px) {
@@ -202,6 +203,7 @@ html {
 	.set--requiem-hoefler h2 {
 		font-family: "Requiem Display A", "Requiem Display B", serif;
 		font-style: italic;
+		font-weight: 400;
 	}
 
 /* Gotham Condensed & Whitney */
@@ -237,6 +239,7 @@ html {
 
 	.set--chronicle-mercury h2 {
 		font-family: "Chronicle Display A", "Chronicle Display B", serif;
+		font-weight: 400;
 	}
 
 /*-----------------------------------*\
